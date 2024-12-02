@@ -16,7 +16,7 @@ namespace Lab5
         {
             InitializeComponent();
         }
-        /* Name:
+        /* Name: Donald Wouakam Tientcheu
          * Date: November 2024
          * This program rolls one dice or calculates mark stats.
          * Link to your repo in GitHub: 
@@ -29,7 +29,10 @@ namespace Lab5
         {
             //select one roll radiobutton
             
+            
+
             //add your name to end of form title
+            this.Text += " Donald Wouakam Tientcheu";
             
         } // end form load
 
@@ -48,13 +51,19 @@ namespace Lab5
         {
             int dice1, dice2;
             //call ftn RollDice, placing returned number into integers
-            
+            dice1 = RollDice();
+            dice2 = RollDice();
+
             //place integers into labels
-            
+            lblDice1.Text = dice1.ToString();
+            lblDice2.Text = dice2.ToString();
+
             // call ftn GetName sending total and returning name
+            string name = GetName(dice1 + dice2);
 
             //display name in label
-            
+            lblRollName.Text = name;
+
         }
 
         /* Name: ClearOneRoll
@@ -74,6 +83,12 @@ namespace Lab5
         * Sent: nothing
         * Return: integer (1-6)
         * Simulates rolling one dice */
+        private int RollDice()
+        {
+            
+            return rand.Next(1,7);
+
+        }
 
 
         /* Name: GetName
@@ -89,6 +104,40 @@ namespace Lab5
         *        11 = Yo-leven
         *        12 = Boxcars
         * Anything else = No special name*/
+        private string GetName(int a)
+        {
+            string name="";
+            switch (a)
+            {
+                case 2:
+                    name = "Snake Eyes";
+                    break;
+                case 3:
+                    name = "Little Joe";
+                    break;
+                case 5:
+                    name = "Fever";
+                    break;
+                case 7:
+                    name = "Most Common";
+                    break;
+                case 9:
+                    name = "Center Field";
+                    break;
+                case 11:
+                    name = "Yo-leven";
+                    break;
+                case 12:
+                    name = "Boxcars";
+                    break;
+                default:
+                    name = "No Special Name";
+                    break;
+
+            }
+            return name;
+
+        }
 
         private void btnSwapNumbers_Click(object sender, EventArgs e)
         {
