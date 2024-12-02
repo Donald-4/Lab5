@@ -184,6 +184,7 @@
             this.radOneRoll.TabStop = true;
             this.radOneRoll.Text = "One Roll";
             this.radOneRoll.UseVisualStyleBackColor = true;
+            this.radOneRoll.CheckedChanged += new System.EventHandler(this.radOneRoll_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -206,6 +207,7 @@
             this.radRollStats.TabStop = true;
             this.radRollStats.Text = "Mark Stats";
             this.radRollStats.UseVisualStyleBackColor = true;
+            this.radRollStats.CheckedChanged += new System.EventHandler(this.radRollStats_CheckedChanged);
             // 
             // grpMarkStats
             // 
@@ -331,6 +333,7 @@
             this.chkSeed.TabIndex = 2;
             this.chkSeed.Text = "Seed Value";
             this.chkSeed.UseVisualStyleBackColor = true;
+            this.chkSeed.CheckedChanged += new System.EventHandler(this.chkSeed_CheckedChanged);
             // 
             // label3
             // 
